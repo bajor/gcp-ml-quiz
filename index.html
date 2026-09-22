@@ -3,37 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A Google Cloud machine learning practice quiz.">
-    <title>GCP Machine Learning Quiz</title>
+    <meta name="description" content="A source-attributed AI engineering, ML engineering, and MLOps practice quiz.">
+    <title>AI Engineering Quiz</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <main class="quiz-shell">
       <header class="hero">
-        <p class="eyebrow">Google Cloud practice</p>
-        <h1>GCP Machine Learning Quiz</h1>
-        <p class="lede">Practice choosing the right Google Cloud machine learning service and capability.</p>
+        <p class="eyebrow">AI Engineering, ML Engineering, and MLOps</p>
+        <h1>AI Engineering Quiz</h1>
+        <p class="lede">Practice with source-attributed questions whose correct and incorrect choices are all explained.</p>
       </header>
-
-      <section class="controls" aria-label="Quiz controls">
-        <label>
-          Priority
-          <select id="priority-filter">
-            <option value="all">All priorities</option>
-            <option value="P0">P0 only</option>
-          </select>
-        </label>
-        <label>
-          Domain
-          <select id="domain-filter">
-            <option value="all">All domains</option>
-          </select>
-        </label>
-        <label class="checkbox-control">
-          <input id="wrong-only" type="checkbox">
-          Wrong answers only
-        </label>
-      </section>
 
       <section class="card" aria-live="polite">
         <div class="stats-row">
@@ -47,10 +27,10 @@
         </div>
 
         <div id="quiz-panel">
-          <p id="question-type" class="question-type"></p>
           <h2 id="prompt" class="prompt"></h2>
           <div id="answers" class="answers"></div>
-          <p id="explanation" class="explanation" hidden></p>
+          <div id="explanations" class="explanations" hidden></div>
+          <p id="question-source" class="question-source"></p>
           <button id="next-button" class="primary-button" type="button" disabled>Next</button>
         </div>
       </section>
@@ -61,6 +41,7 @@
       </footer>
     </main>
 
+    <script src="question-schema.js"></script>
     <script src="questions.js"></script>
     <script src="app.js"></script>
   </body>

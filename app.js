@@ -43,7 +43,7 @@
     bindEvents();
     rebuildDeck();
     elements.bankStatus.textContent = state.questions.length === 0
-      ? "Question bank is empty. Import a complete source-backed question set."
+      ? "Question bank is empty."
       : `${state.questions.length} questions loaded. Progress is stored in this browser only.`;
   }
 
@@ -209,7 +209,7 @@
     link.href = source.url;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.textContent = `${source.name} (${source.license})`;
+    link.textContent = source.name;
     elements.source.replaceChildren("Source: ", link);
   }
 
